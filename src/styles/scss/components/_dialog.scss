@@ -1,0 +1,45 @@
+.main-dialog {
+  top: 10%;
+  @include breakpoint(mobile){
+    width: 90%!important;
+  }
+
+}
+
+.rc-dialog-body .meet-request::after {
+  display: none;
+}
+.rc-dialog-body .meet-request {
+  max-height: 750px;
+  overflow: auto;
+  @include breakpoint(desktop) {
+    max-height: 560px;
+  }
+  @include breakpoint(smalldesktop) {
+    max-height: 520px;
+  }
+  @include breakpoint(tablet) {
+    max-height: 500px;
+  }
+}
+.rc-dialog-header{
+  color: black!important;
+  background-color: aliceblue!important;
+
+}
+.rc-dialog-content{
+  background-color: aliceblue!important;
+}
+.block-dialog{
+  top:10%;
+  width: 950px!important;
+  margin-bottom: 30px!important;
+  @include breakpoint(desktop){
+    width: 750px !important;
+  }
+  @include breakpoint(ex-sm-tablet){
+    width: 90%!important;
+    top:5%;
+
+  }
+}

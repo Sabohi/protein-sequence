@@ -1,0 +1,690 @@
+.form-control:focus,
+.btn:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  outline: 0;
+}
+.form-control {
+  margin-bottom: 5px;
+}
+.error__message {
+  color: red;
+  font-size: 20px;
+  @include breakpoint(ex-sm-tablet) {
+    font-size: 14px;
+  }
+  @include breakpoint(mobile) {
+    font-size: 14px;
+  }
+  @include breakpoint(desktop) {
+    font-size: 14px;
+  }
+}
+a {
+  //color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
+input {
+  cursor: text;
+}
+button {
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+}
+.button-back {
+  float: left;
+  margin-top: 5px;
+  color: #0a1733;
+  background: none;
+  border: none;
+}
+button:focus {
+  outline: none;
+}
+*:disabled {
+  cursor: not-allowed;
+}
+
+.innerpagecol {
+  @include breakpoint(ex-sm-tablet) {
+    flex: auto !important;
+  }
+}
+.list-direction {
+  flex-direction: column;
+  span {
+    margin-bottom: 5px;
+  }
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.main-container {
+  padding: 0 42px;
+  background: aliceblue;
+  padding-bottom: 75px;
+  max-width: 1920px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-top: 110px;
+  padding-bottom: 90px !important;
+  @include breakpoint(tablet) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include breakpoint(ex-sm-tablet) {
+    padding: 0 20px;
+    padding-top: 100px;
+  }
+  @include breakpoint(mobile) {
+    padding: 15px;
+    max-width: 100%;
+    padding-top: 94px;
+  }
+  .full-width {
+    display: flex;
+
+    .columns {
+      flex: 1;
+      @include breakpoint(sm-tablet) {
+        flex: unset;
+      }
+    }
+  }
+}
+.button {
+  border-radius: 0;
+  background: beige;
+  color: black;
+  //color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+  @include breakpoint(mediumdesktop) {
+    font-size: 18px;
+  }
+  @include breakpoint(desktop) {
+    font-size: 16px;
+  }
+  @include breakpoint(mobile) {
+    font-size: 14px;
+  }
+  &:hover {
+    color: #0a1733 !important;
+    background: #fff;
+    border-color: #72d36b !important;
+    transition: all 0.4s ease 0s;
+  }
+}
+
+/* The container */
+.radio-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.radio-container .checkmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  background: transparent;
+  border: solid 2px black;
+  //border: solid 2px #fff;
+  border-radius: 50%;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-container .checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+}
+
+.list-tab {
+  .list-content {
+    padding: 50px 0;
+    border-bottom: solid 2px #72d36b;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include breakpoint(desktop) {
+      padding: 20px 0;
+    }
+    @include breakpoint(ex-sm-tablet) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    h6 {
+      font-size: 20px;
+      font-weight: bold;
+      @include breakpoint(mediumdesktop) {
+        font-size: 16px;
+      }
+      @include breakpoint(desktop) {
+        font-size: 14px;
+      }
+      a {
+        font-size: 20px;
+        font-weight: bold;
+        @include breakpoint(desktop) {
+          font-size: 14px;
+        }
+      }
+      span {
+        font-weight: normal;
+        padding-left: 20px;
+      }
+    }
+    p {
+      font-size: 20px;
+      text-align: justify;
+      @include breakpoint(desktop) {
+        font-size: 14px;
+      }
+    }
+    .right-content {
+      ul {
+        display: flex;
+        margin-bottom: 0;
+
+        li {
+          width: 120px;
+          @include breakpoint(desktop) {
+            width: 90px;
+          }
+          @include breakpoint(ex-sm-tablet) {
+            display: flex;
+            justify-content: flex-start;
+            width: 90px;
+            align-items: flex-start;
+          }
+          @include breakpoint(mobile) {
+            width: 80px;
+          }
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 8px;
+          span {
+            font-size: 21px;
+            width: 30px;
+            height: 30px;
+            background: #72d36b;
+            // background: #72d36b;
+            border-radius: 50%;
+            text-align: center;
+            color: black;
+            //color: #fff;
+            @include breakpoint(mobile) {
+              line-height: 29px;
+            }
+            //line-height: 26px;
+          }
+          .fa {
+            font-size: 30px;
+            @include breakpoint(mediumdesktop) {
+              font-size: 26px;
+            }
+          }
+          .plus {
+            color: #72d36b;
+            //color: #72d36b;
+          }
+          .times {
+            color: #72d36b;
+            //color: #72d36b;
+          }
+          .watch {
+            background: #72d36b;
+            // background: #72d36b;
+          }
+        }
+        li:last-child {
+          margin-right: 0px;
+        }
+        li:nth-of-type(2) {
+          flex-direction: column;
+          span {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    .left-content-meet {
+      display: flex;
+      width: 50%;
+      padding-right: 20px !important;
+      @include breakpoint(exsm-tablet) {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .agenda-meet {
+        width: 60%;
+      }
+    }
+    .agenda-list-virtual {
+      display: flex;
+      @include breakpoint(exsm-tablet) {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+    .agenda__list__middle__section {
+      padding-top: 10px;
+      padding-right: 10px;
+      @include breakpoint(ex-sm-tablet) {
+        padding-top: 0;
+      }
+      h6 {
+        @include breakpoint(ex-sm-tablet) {
+          display: flex;
+        }
+      }
+    }
+
+    .left-content {
+      padding-right: 40px;
+      @include breakpoint(ex-sm-tablet) {
+        padding-right: 0;
+      }
+      .left-flex {
+        display: flex;
+        flex-direction: column;
+        a {
+          margin-bottom: 10px;
+        }
+        span {
+          padding-left: 0;
+        }
+      }
+      .sponsor-rep {
+        display: flex;
+        margin-left: 10px;
+        justify-content: space-between;
+        .spon-left {
+          margin-right: 0px;
+          & > img {
+            object-fit: cover;
+            border-radius: 50%;
+            min-width: 50px;
+            width: 50px;
+            height: 50px;
+          }
+        }
+        .spon-mid {
+          margin-right: 10px;
+          & > img {
+            object-fit: cover;
+            border-radius: 50%;
+            min-width: 50px;
+            width: 50px;
+            height: 50px;
+          }
+        }
+        .spons-right {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    .session-leftContent {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .left-flex {
+        width: calc(100% - 100px);
+        @include breakpoint(ex-sm-tablet) {
+          width: 100%;
+        }
+        .group-title {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .middle-sponsor {
+        width: 200px;
+        .react-multi-carousel-item {
+          height: 100%;
+          .item {
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100px;
+              border: none;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+  hr {
+    border-bottom: 23px solid #72d36b;
+    @include breakpoint(desktop) {
+      border-bottom: 10px solid #72d36b;
+    }
+    margin: 0 !important;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #ebebeb;
+  border-radius: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #72d36b;
+  //background-color: #72d36b;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.founder-logo {
+  display: block;
+  @include breakpoint(ex-sm-tablet) {
+    display: none;
+  }
+}
+.small-screen-show {
+  display: none;
+  @include breakpoint(sm-tablet) {
+    display: block;
+  }
+}
+.navbar-toggler-right {
+  position: absolute;
+  right: 0;
+
+  cursor: pointer;
+  font-size: 30px;
+}
+.navbar-expand-lg {
+  @include breakpoint(sm-tablet) {
+    justify-content: space-between;
+  }
+  .navbar-nav {
+    @include breakpoint(sm-tablet) {
+      flex-direction: column;
+    }
+  }
+}
+.navbar-expand-lg .navbar-toggler {
+  display: none;
+  @include breakpoint(sm-tablet) {
+    display: block;
+    color: black;
+  }
+}
+
+.rc-dialog-title {
+  font-size: 18px;
+}
+.rc-dialog-close {
+  color: black !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+.rc-dialog-close-x:after {
+  font-size: 26px;
+}
+.rc-dialog {
+  margin: 0 auto !important;
+}
+
+#preloader {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: blueviolet;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+#loader:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #def8dc;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+#loader:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: beige;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.body-overflow {
+  @include breakpoint(sm-tablet) {
+    overflow: hidden;
+  }
+}
+
+.save-screen-mobile {
+  @include breakpoint(tablet) {
+    padding: 30px;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.fa-sign-out {
+  padding-right: 4px !important;
+}
+.nodatafound-error {
+  height: 20px;
+  align-items: center;
+  height: 20px;
+  display: flex;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  justify-content: center;
+  @include breakpoint(mediumdesktop) {
+    font-size: 16px;
+  }
+}
+
+.form-width {
+  width: 100%;
+}
+.survey-list h6 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.survey-head {
+  font-size: 16px !important;
+}
+
+.react-confirm-alert-button-group > button {
+  background: #72d36b !important;
+  color: black !important;
+}
+.imgDiv {
+  width: auto !important;
+  height: auto !important;
+  margin-right: 25px;
+  img,
+  button {
+    width: 38px !important;
+    height: 38px !important;
+  }
+}
+.no-data {
+  background: azure;
+  padding: 40px;
+  text-align: center;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  margin: 3rem;
+  border-radius: 0.6rem;
+  background: #ffffff;
+  box-shadow: 0 0.8rem 2rem rgba(#5a6181, 0.05);
+
+  &__numbers,
+  &__btn,
+  &__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  &__dots {
+    width: 2.6rem;
+    height: 2.6rem;
+    color: var(--greyLight);
+    cursor: initial;
+  }
+
+  &__numbers {
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 0.4rem;
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    &.active {
+      color: #ffffff;
+      background: var(--primary);
+      font-weight: 600;
+      border: 1px solid var(--primary);
+    }
+  }
+
+  &__btn {
+    color: var(--greyLight);
+    pointer-events: none;
+
+    &.active {
+      color: var(--greyDark);
+      pointer-events: initial;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+}
+.list {
+  margin-top: 40px;
+}
+.radio-main {
+  margin-right: 5px;
+}

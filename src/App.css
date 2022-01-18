@@ -1,0 +1,20 @@
+.customButton {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.react-confirm-alert-overlay {
+  z-index: 99999 !important;
+}
+.react-datetime-picker {
+  width: 100%;
+  height: 35px;
+  background: #fff;
+}
+.html__description {
+  padding-left: 20px;
+}
+.html__description > ul > li {
+  list-style: disc !important;
+}
